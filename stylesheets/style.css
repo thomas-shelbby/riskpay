@@ -176,6 +176,116 @@ h1 {
    width: 65%;
 }
 
+.fixed-width-img {
+   max-width: 800px;
+   height: auto;
+   width: -webkit-fill-available;
+}
+
+.sec-5-col-bg-img {
+   position: relative;
+   overflow: hidden;
+   /* background-color: #fff; */
+}
+
+.sec-5-col-bg-img::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #fff;
+   background: url('../images/section-5-img-3.png') no-repeat center
+      center/cover;
+   z-index: -1;
+}
+
+.sec-6-accordian-cont-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-column-gap: 20px;
+   grid-row-gap: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+   color: unset !important;
+   /* background-color: unset !important; */
+   box-shadow: none !important;
+}
+
+.accordion-button:focus {
+   box-shadow: none !important;
+}
+
+.accordion-button::after {
+   content: unset;
+}
+
+.sec-6-accordian-btn-icon-css {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background-color: #fff;
+   font-size: 14px; /* Adjust icon size */
+   line-height: 1; /* Prevent icon from shifting */
+   transition: all 0.5s ease;
+   min-width: 30px;
+   min-height: 30px;
+}
+
+.accordion-button:not(.collapsed) .sec-6-accordian-btn-icon-css {
+   transform: rotate(180deg);
+}
+
+.container-sm {
+   max-width: 768px;
+}
+
+.btn-after-toggle-none::after {
+   content: unset !important;
+}
+
+.form-check-input:checked {
+   background-color: #ff0000;
+   border-color: #ff0000;
+}
+
+.form-check-input:focus {
+   border-color: #ff0000;
+   /* outline: 0; */
+   box-shadow: none !important;
+}
+
+.footer-social-link-cont {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: #ff0000;
+   font-size: 14px; /* Adjust icon size */
+   line-height: 1; /* Prevent icon from shifting */
+   transition: all 0.5s ease;
+   min-width: 40px;
+   min-height: 40px;
+}
+
+.footer-social-link-cont:hover img {
+   filter: brightness(0) saturate(100%) invert(14%) sepia(95%) saturate(7465%)
+      hue-rotate(0deg) brightness(102%) contrast(118%);
+}
+
+.footer-social-link-cont:hover {
+   background-color: transparent;
+   border: 2px solid #ff0000;
+}
+
 @media screen and (max-width: 576px) {
    .hero-title-width {
       width: 100%;
@@ -199,7 +309,7 @@ h1 {
       font-size: 20px;
    }
 
-   .sec-4-col-2-p-width{
+   .sec-4-col-2-p-width {
       font-size: 14px;
    }
 }
@@ -220,6 +330,9 @@ h1 {
    }
    .sec-4-col-2-h-width {
       width: 100%;
+      font-size: 24px;
+   }
+   .sec-5-col-2-h-width {
       font-size: 24px;
    }
 }
