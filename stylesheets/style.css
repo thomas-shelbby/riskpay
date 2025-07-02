@@ -286,6 +286,10 @@ h1 {
    border: 2px solid #ff0000;
 }
 
+body {
+   overflow-x: hidden;
+}
+
 @media screen and (max-width: 576px) {
    .hero-title-width {
       width: 100%;
